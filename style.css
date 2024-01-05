@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100vw;
+    background: darkblue;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #90ee9099;
+    font-size: clamp(16px, 8vw, 5rem);
+}
+
+.logo {
+    font-family: 'Rubik Doodle Shadow', system-ui;
+    font-weight: 700;
+    font-size: 0.6em;
+    background-color: #00DBDE;
+    background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: translateX(50px);
+}
+
+.nav-bar {
+    width: 30%;
+    transform: translateX(-50px);
+}
+
+.list-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.list {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element {
+    position: relative;
+    text-decoration: none;
+    font-size: 0.2em;
+    font-family: monospace;
+    font-weight: 700;
+    padding: 5px 0;
+    transition: 0.4s;
+}
+
+.element::after,
+.element::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: orange;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.element::before {
+    top: 0;
+    left: 0;
+}
+
+.element::after {
+    bottom: 0;
+    right: 0;
+}
+
+.active {
+    color: #fff;
+}
+
+.active::before,
+.active::after {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .element:hover {
+        color: #FFF;
+    }
+
+    .element:hover::before,
+    .element:hover::after {
+        width: 100%;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 80px;
+    }
+
+    .logo {
+        font-size: 0.8em;
+    }
+
+    .nav-bar {
+        position: fixed;
+        right: -50%;
+        top: 0;
+        width: 50%;
+        min-height: 100vh;
+        background: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        transform: translateX(0);
+        transition: 0.5s;
+    }
+
+    .list-container {
+        height: 50vh;
+        color: #fff;
+        flex-direction: column;
+        font-size: 5rem;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .element {
+        width: 100%;
+        text-align: center;
+        border-block: 2px solid gray;
+    }
+
+    .element:active {
+        background: gray;
+        color: #FFF;
+    }
+
+    .close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8em;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+    }
+
+    .close:active {
+        background: gray;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: blue;
+        font-size: 0.8em;
+        transform: translateX(-40px);
+    }
+
+    .menu:active {
+        background: gray;
+        color: #fff;
+    }
+}
