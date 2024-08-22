@@ -18,10 +18,6 @@ body {
     font-family: system-ui;
 }
 
-.sing-up {
-    width: 97.674px;
-}
-
 .wrapper {
     width: 200vw;
     display: flex;
@@ -29,11 +25,12 @@ body {
 }
 
 .section1 {
-    background: #1e0059;
+    background: url(backgrounds/image-1.jpg) no-repeat center/cover;
+    /* background: url(backgrounds/image-1.jpg) no-repeat center/cover; */
 }
 
 .section01 {
-    background: #9801dd;
+    background: url(backgrounds/image-2.jpg) no-repeat center/cover;
 }
 
 .section02 {
@@ -55,14 +52,14 @@ body {
 
 .x1 {
     color: #FFF;
-    background: firebrick;
+    background: url(backgrounds/image-3.jpg) no-repeat center/cover;
 }
 
 .x2 {
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-    background: darkgoldenrod;
+    background: url(backgrounds/image-4.jpg) no-repeat center/cover;
 }
 
 .section2 {
-    background: teal;
+    background: url(backgrounds/image-5.jpg) no-repeat center/cover;
 }
